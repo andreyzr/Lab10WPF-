@@ -1,0 +1,41 @@
+﻿<Window x:Class="HW.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW"
+        mc:Ignorable="d"
+        Title="Отражение" Height="700" Width="1000" Background="BlanchedAlmond">
+    <StackPanel>
+        <Border BorderBrush="White" BorderThickness="5"
+                HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Border.Effect>
+                <DropShadowEffect Color="Black" Direction="40" ShadowDepth="20" Opacity="0.4"/>
+            </Border.Effect>
+            <Border.RenderTransform>
+                <SkewTransform CenterX="0" CenterY="0"  AngleX="0" AngleY="10"/>
+            </Border.RenderTransform>
+            <Image Source="Data/1.jpg" Width="318" Height="333" x:Name="myImage"/>
+        </Border>
+
+        <Border Width="318" Height="333">
+            <Border.Background>
+                <VisualBrush Visual="{Binding ElementName=myImage}">
+                    <VisualBrush.Transform>
+                        <ScaleTransform ScaleX="1" ScaleY="-1" CenterX="200" CenterY="150">
+                        </ScaleTransform>
+                    </VisualBrush.Transform>
+                </VisualBrush>
+            </Border.Background>
+            <Border.OpacityMask>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="0" Color="Black"></GradientStop>
+                    <GradientStop Offset="0.6" Color="Transparent"></GradientStop>
+                </LinearGradientBrush>
+            </Border.OpacityMask>
+            <Border.RenderTransform>
+                <SkewTransform CenterX="30" CenterY="2"  AngleX="-30" AngleY="10"/>
+            </Border.RenderTransform>
+        </Border>
+    </StackPanel>
+</Window>

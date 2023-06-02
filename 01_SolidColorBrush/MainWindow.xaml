@@ -1,0 +1,28 @@
+﻿<Window x:Class="_01_SolidColorBrush.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_01_SolidColorBrush"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Data/1.jpg" Stretch="Uniform" Viewport="0,0,0.25,0.25" TileMode="FlipXY" />
+        </Grid.Background>
+        <!--<Button Width="200" Height="100" Content="Кнопка" Click="Button_Click">
+            <Button.Background>
+                --><!--<LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="Blue" Offset="0"/>
+                    <GradientStop Color="Yellow" Offset="0.5"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                </LinearGradientBrush>--><!--
+                <RadialGradientBrush GradientOrigin="0.75,0.25">
+                    <GradientStop Color="Blue" Offset="0"/>
+                    <GradientStop Color="Yellow" Offset="0.5"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>-->
+    </Grid>
+</Window>

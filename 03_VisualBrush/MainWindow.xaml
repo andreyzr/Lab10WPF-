@@ -1,0 +1,20 @@
+﻿<Window x:Class="_03_VisualBrush.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_03_VisualBrush"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid  Background="Lavender">
+        <Button x:Name="button1" Content="VisualBrush" Background="Black" FontWeight="Black" 
+                Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top"
+                Width="100" Height="30"/>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Width="120" Height="35">
+            <TextBlock.Background>
+                <VisualBrush Visual="{Binding ElementName=button1}"/>
+            </TextBlock.Background>
+        </TextBlock>
+    </Grid>
+</Window>
